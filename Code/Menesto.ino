@@ -1,7 +1,7 @@
  /*======================================
  Filename        : SmartVest.ino                                                    
  Description     : Arduino sketch file.                                         
- Author          : Coder's Cafe                                                       
+ Author          : Coders Cafe                                                       
  Version         : 1.0.3                                                          
  Initial Release : 01-April-2020                                           
  License         : MIT
@@ -166,15 +166,18 @@ void loop()
       timer.setInterval(32400000L,notification);
     }
    if(humidity < 40)
-   { //Normal Humidity, 8 glass water per day
+   { 
+     //Normal Humidity, 8 glass water per day
      timer.setInterval(6750000L,notification);
    }
    else if(humidity > 40 && humidity < 55)
-    { //High Humidity, 12 glass water per day
+    { 
+      //High Humidity, 12 glass water per day
       timer.setInterval(4500000L,notification);
     } 
    else if(humidity > 55 ) 
-    { //Dehydration, 15 glass water per day
+    { 
+      //Dehydration, 15 glass water per day
       timer.setInterval(3600000L,notification); 
     }
 
